@@ -5,9 +5,12 @@ const express = require('express');
 const sqlite3 = require('sqlite3');
 const xmlparser = require('express-xml-bodyparser');
 const axios = require('axios');
+// const cors = require('cors')
 
 var db = new sqlite3.Database('nem_id_database.sqlite');
 var app = express();
+
+// app.use(cors())
 
 app.use(express.json());
 app.use(xmlparser());
